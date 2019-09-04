@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 
 // estas son las direcciones del archivo
-app.use(require('./users')); // login por face o twitter
+app.use(require('./user')); // login por face o twitter
 https://www.youtube.com/watch?v=Oy5ds6z4R-c
 app.use(require('./rol'));
 app.use(require('./enterpriseCategory'));
