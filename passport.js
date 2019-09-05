@@ -7,7 +7,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 // Fichero de configuración donde se encuentran las API keys
 // Este archivo no debe subirse a GitHub ya que contiene datos
 // que pueden comprometer la seguridad de la aplicación.
-var config = require('./loginsocial');
+var loginsocial = require('./loginsocial');
 
 // Exportamos como módulo las funciones de passport, de manera que
 // podamos utilizarlas en otras partes de la aplicación.
@@ -56,8 +56,8 @@ module.exports = function(passport) {
 
 	// Configuración del autenticado con Facebook
 	passport.use(new FacebookStrategy({
-		clientID        : config.facebook.key,
-		clientSecret    : config.facebook.secret,
+		clientID        : loginsocial.facebook.id,
+		clientSecret    : loginsocial.facebook.secret,
 		callbackURL     : '/auth/facebook/callback',
 		profileFields   : ['id', 'displayName', /*'provider',*/ 'photos']
 	}, function(accessToken, refreshToken, profile, done) {
