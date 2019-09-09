@@ -32,9 +32,9 @@ let userSchema = new Schema({
   //   type:Number
   // },
   rol:{
-    type: String,
-    // type: Schema.Types.ObjectId,
-    // ref: 'Rol', // nombre de la tabla
+    // type: String,
+    type: Schema.Types.ObjectId,
+    ref: 'Role', // nombre de la tabla
     // required:[true,"El rol es requerido"]
   },
   state:{

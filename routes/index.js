@@ -7,8 +7,8 @@ app.use(require('./login')); //
 app.use(require('./user')); // 
 // https://www.youtube.com/watch?v=Oy5ds6z4R-c
 app.use(require('./role'));
-// app.use(require('./enterpriseCategory'));
-// app.use(require('./enterprise'));
+app.use(require('./enterpriseCategory'));
+app.use(require('./enterprise'));
 // app.use(require('./department'));
 // app.use(require('./rubriCategory')); // gestion de categoria de cada rubrica
 // app.use(require('./rubric')); // gedtiond e rubricas de calificacion
