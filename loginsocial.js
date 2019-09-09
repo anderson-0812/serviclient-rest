@@ -1,3 +1,4 @@
+/*
 // se tendra las apikey y api secret de facebook y twitter
 var loginsocial = {
     twitter: {
@@ -11,3 +12,5 @@ var loginsocial = {
 };
 
 module.exports = loginsocial;
+
+*/
