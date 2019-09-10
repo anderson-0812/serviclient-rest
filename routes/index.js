@@ -9,6 +9,8 @@ app.use(require('./user')); //
 app.use(require('./role'));
 app.use(require('./enterpriseCategory'));
 app.use(require('./enterprise'));
+//Permisos user role enterprise
+app.use(require('./permissionUserRoleEnterprise'));
 // app.use(require('./department'));
 // app.use(require('./rubriCategory')); // gestion de categoria de cada rubrica
 // app.use(require('./rubric')); // gedtiond e rubricas de calificacion

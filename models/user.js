@@ -31,12 +31,6 @@ let userSchema = new Schema({
   // age:{
   //   type:Number
   // },
-  rol:{
-    // type: String,
-    type: Schema.Types.ObjectId,
-    ref: 'Role', // nombre de la tabla
-    // required:[true,"El rol es requerido"]
-  },
   state:{
 
       type:Boolean,
