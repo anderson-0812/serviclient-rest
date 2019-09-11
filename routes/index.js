@@ -15,7 +15,9 @@ app.use(require('./department'));
 app.use(require('./rubricCategory')); // gestion de categoria de cada rubrica
 app.use(require('./evaluationRubric')); // gedtiond e rubricas de calificacion
 app.use(require('./evaluationItem')); // gestion de  items de cada rubrica
-// app.use(require('./evaluationResult'));// se gestiona el resultado de la evaluacion
+app.use(require('./result'));// se gestiona el resultado de la evaluacion
+app.use(require('./resultEvaluationItem'));// se gestiona el resultado de la evaluacion y sus item
+app.use(require('./queryResultItem'));// se gestiona el resultado de la evaluacion y sus item
 
 
 // espeficicamos q solo exporte loq
