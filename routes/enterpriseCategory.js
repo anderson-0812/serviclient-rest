@@ -18,6 +18,24 @@ app.get('/enterpriseCategory',(req,res)=>{
       })
     })
   });
+  //get enterpreise Catgory unique
+  app.get('/enterpriseCategory/:id',(req,res)=>{
+    // ojo find(aqui van las condiciones de busqueda){}
+    let id = req.params.id;
+
+    eCategory.find({"state":true,"_id":id}).exec((err,enterpriseCategoryDB)=>{
+      if(err){
+        return res.status(500).json({
+          ok:false,
+          err
+        })
+      }
+      res.status(200).json({
+        ok: true,
+        enterpriseCategoryDB
+      })
+    })
+  });
   
   app.post('/enterpriseCategory',(req,res)=>{
     let body = req.body
