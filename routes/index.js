@@ -13,7 +13,7 @@ app.use(require('./enterprise'));
 app.use(require('./permissionUserRoleEnterprise'));
 app.use(require('./department'));
 app.use(require('./rubricCategory')); // gestion de categoria de cada rubrica
-// app.use(require('./rubric')); // gedtiond e rubricas de calificacion
+app.use(require('./evaluationRubric')); // gedtiond e rubricas de calificacion
 // app.use(require('./evaluationItem')); // gestion de  items de cada rubrica
 // app.use(require('./evaluationResult'));// se gestiona el resultado de la evaluacion
 
