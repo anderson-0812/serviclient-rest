@@ -10,18 +10,15 @@ app.post('/login',(req,res)=>{
     User.findOne({
       email:body.email
     },(err,result)=>{
-      console.log("Login")
-      console.log(result)
       if(err){
-        res.status(500).json({
+        return res.status(500).json({
           ok: false,
           err
         })
       }
       if(!result){
-        res.status(400).json({
+        return res.status(400).json({
           ok:false,
-          result,
           message:'No se encontro el usuario'
         })
       }
@@ -36,10 +33,15 @@ app.post('/login',(req,res)=>{
           expiresIn: process.env.CADUCIDAD
         });
   
-        res.json({
+        return res.json({
           ok: true,
           usuario: result,
           token
+        })
+      }else{
+        return res.status(400).json({
+          ok: false,
+          message: 'No se encontro el usuario'
         })
       }
     })
