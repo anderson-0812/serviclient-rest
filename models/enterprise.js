@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// importamos el modelo eschema enterpriseCategory alque vamosa  referenciar el campo enterpriseCategory
+const enterpriseCategory = require('./enterpriseCategory');
 
 
 let enterpriseSchema = new Schema({
@@ -19,11 +21,10 @@ let enterpriseSchema = new Schema({
     enterpriseCategory:{
         // type: String,
         type: Schema.Types.ObjectId,
-        ref: 'enterpriseCategory', // nombre de la tabla
+        ref: enterpriseCategory, // nombre de la tabla
         // required:[true,"La categoria es requerido"]
       },
   });
-  
   
   // en esta parte creo la tabla le paso el nombre y su esquema
   module.exports  = mongoose.model('Enterprise',enterpriseSchema);

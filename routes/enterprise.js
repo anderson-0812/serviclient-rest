@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const Enterprise = require('../models/enterprise');
+const eCategory = require('../models/enterpriseCategory');
 
 
 app.get('/enterprise',(req,res)=>{
@@ -112,6 +113,26 @@ app.get('/enterprise',(req,res)=>{
     })
   })
   
+
+  // get listado empresas por categoria
+  app.get('/enterprise/filterByCategory/:idCategory',(req,res)=>{
+    // extraemos el id de la categoria
+    let idCategory = req.params.idCategory;
+
+    Enterprise.find({"state":true,"enterpriseCategory":idCategory})
+    .populate("enterpriseCategory").exec((err,enterpriseDB)=>{
+      if(err){
+        return res.status(500).json({
+          ok: false,
+          err
+        })
+      }
+      res.status(200).json({
+        ok: true,
+        enterpriseDB
+      })
+    })
+  });
   
   module.exports = app;
   
