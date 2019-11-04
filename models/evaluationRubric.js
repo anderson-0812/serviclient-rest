@@ -32,4 +32,4 @@ let RubricSchema = new Schema({
   
   
   // en esta parte creo la tabla le paso el nombre y su esquema
-  module.exports  = mongoose.model('Rubric',RubricSchema);
+  module.exports  = mongoose.model('evaluationRubric',RubricSchema);

@@ -16,10 +16,10 @@ let itemSchema = new Schema({
       type: Boolean,
       default:true
     },
-    rubric:{
+    evaluationRubric:{
         // type: String,
         type: Schema.Types.ObjectId,
-        ref: 'rubric', // nombre de la tabla
+        ref: 'evaluationRubric', // nombre de la tabla
         // required:[true,"La categoria es requerido"]
       },
   });
