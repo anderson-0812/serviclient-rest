@@ -22,6 +22,12 @@ let resultSchema = new Schema({
         ref: 'user', // nombre de la tabla
         // required:[true,"La categoria es requerido"]
       },
+      evaluationRubric:{
+        // type: String,
+        type: Schema.Types.ObjectId,
+        ref: 'evaluationRubric', // nombre de la tabla
+        // required:[true,"La categoria es requerido"]
+      },
   });
   
   

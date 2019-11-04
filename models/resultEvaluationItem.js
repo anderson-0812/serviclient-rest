@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 let resultItemSchema = new Schema({
-    
+
     state:{
       type: Boolean,
       default:true
