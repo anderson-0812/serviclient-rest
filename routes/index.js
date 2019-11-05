@@ -18,6 +18,7 @@ app.use(require('./evaluationItem')); // gestion de  items de cada rubrica
 app.use(require('./result'));// se gestiona el resultado de la evaluacion
 app.use(require('./resultEvaluationItem'));// se gestiona el resultado de la evaluacion y sus item
 app.use(require('./queryResultItem'));// se gestiona el resultado de la evaluacion y sus item
+app.use(require('./suggestEvaluationItem'));// se gestiona las sugerencias de items por categoria de rubricas
 
 
 // espeficicamos q solo exporte loq

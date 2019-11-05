@@ -9,8 +9,8 @@ let suggestEvaluationItem = new Schema({
     state:{
         type: Boolean,
         default:true
-      },
-      evaluationRubric:{
+    },
+    evaluationRubric:{
         type: Schema.Types.ObjectId,
         ref: 'evaluationRubric', // nombre de la tabla
     }
